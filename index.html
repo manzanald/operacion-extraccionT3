@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operación Extracción</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    #inicio {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0, 0, 0, 0.7);
+      color: white; font: bold 32px sans-serif; text-align: center;
+      cursor: pointer;
+    }
+    #hud {
+      position: absolute; bottom: 20px; right: 30px;
+      color: white; font: bold 32px monospace;
+      text-shadow: 0 0 6px black;
+    }
+    #mira {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      color: white; font: bold 28px sans-serif;
+      text-shadow: 0 0 4px black;
+    }
+    #mensaje {
+      display: none;
+      position: absolute; inset: 0;
+      align-items: center; justify-content: center;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.65);
+      font: bold 64px sans-serif; text-align: center;
+      text-shadow: 0 0 12px black;
+    }
+  </style>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="inicio">Haz clic para jugar<br>W A S D = moverse · Mouse = mirar · Clic = disparar · 1 / 2 = cambiar arma</div>
+  <div id="mira">+</div>
+  <div id="hud"></div>
+  <div id="mensaje"></div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
